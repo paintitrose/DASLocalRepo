@@ -1,0 +1,49 @@
+﻿@model IEnumerable<T2_VEGA_CHRIS.Models.Distribuidor>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container pt-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Lista de Distribuidores</h2>
+        </div>
+    </div>
+
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Nombre Distribuidor</th>
+                    <th>Razón Social</th>
+                    <th>Teléfono</th>
+                    <th>Año de inicio de operación</th>
+                    <th>Correo de contacto</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <th width="40%">@item.NombreDistribuidor</th>
+                        <th width="40%">@item.RazonSocial</th>
+                        <th width="40%">@item.Telefono</th>
+                        <th width="40%">@item.AnioInicioOperacion</th>
+                        <th width="40%">@item.Contacto</th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No hay registros de Distribuidores</p>
+    }
+
+</div>
+
