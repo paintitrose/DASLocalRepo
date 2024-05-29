@@ -5,7 +5,7 @@ namespace T2_VEGA_CHRIS.Models
     public class Distribuidor
     {
         [Key]
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Ingrese el Nombre del distribuidor")]
         public string NombreDistribuidor { get; set; }

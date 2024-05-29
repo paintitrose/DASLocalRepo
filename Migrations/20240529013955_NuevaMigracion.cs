@@ -14,7 +14,8 @@ namespace T2_VEGA_CHRIS.Migrations
                 name: "Distribuidor",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     NombreDistribuidor = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RazonSocial = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),

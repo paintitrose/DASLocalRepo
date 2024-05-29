@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="~/T2_VEGA_CHRIS.styles.css" asp-append-version="true" />
 </head>
 <body>
+    
+    <style>
+        body {
+            background-color: yellow;
+        }
+    </style>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -27,6 +34,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Distribuidor" asp-action="Index">Distribuidor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Distribuidor" asp-action="DistPeru">DistribuidorPeru</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Distribuidor" asp-action="DistMundo">DistribuidorMundo</a>
                         </li>
                     </ul>
                 </div>

@@ -23,8 +23,11 @@ namespace T2_VEGA_CHRIS.Migrations
 
             modelBuilder.Entity("T2_VEGA_CHRIS.Models.Distribuidor", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("AnioInicioOperacion")
                         .HasColumnType("int");
